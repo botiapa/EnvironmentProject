@@ -7,6 +7,10 @@ body, html {
     width: 100%;
 }
 
+#banner {
+    background-image: url("./media/header_image.jfif");
+}
+
 .parallax {
     background-attachment: fixed;
     background-position: center;
