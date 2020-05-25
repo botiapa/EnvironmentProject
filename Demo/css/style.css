@@ -1,0 +1,192 @@
+:root {
+    /* Színek definiálása */
+    --color-primary:            #12e6bc;
+    --color-secondary:          #a4edeb;
+
+    --color-text:               #000000;
+    --color-higklight-hover:    #aaaaaa;
+
+    --color-bg-primary:         #e6e6e6;
+    --color-bg-secondary:       #dbdbdb;
+
+    --transition-time:            700ms;
+    --transition-type:            ease;
+    
+}
+
+body {
+    font-family: Montserrat;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+  
+body::-webkit-scrollbar-track {
+    background: var(--color-bg-primary);
+}
+  
+body::-webkit-scrollbar-thumb {
+    background: var(--color-higklight-hover);
+}
+
+.navbar {
+    display: block;
+    list-style-type: none;
+    overflow: hidden;
+    position: fixed;
+    z-index: 11;
+
+    margin: 0;
+    padding: 0;
+    height: 4rem;
+    width: 100vw;
+
+    background-color: var(--color-bg-primary);
+}
+
+.nav-element {
+    float: left;
+}
+
+.nav-element:last-child {
+    float: right;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    
+    border-bottom: 3px solid var(--color-bg-primary);
+    height: 4rem;
+
+    padding: 0 1.5rem;
+    margin: 0;
+
+    text-align: center;
+    text-decoration: none;
+    
+    transition: var(--transition-time) var(--transition-type);
+    color: var(--color-text);
+}
+
+.nav-link svg {
+    width: 1.7rem;
+    transition: var(--transition-time) var(--transition-type);
+    filter: grayscale(100%) opacity(0.9) brightness(60%);
+}
+
+.nav-link:hover {
+    border-bottom: 3px solid var(--color-higklight-hover);
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text);
+}
+
+.nav-link:hover svg {
+    filter: grayscale(0%) opacity(1) brightness(80%);
+}
+
+.nav-logo {
+    font-size: 19px;
+    letter-spacing: 1px;
+    margin: 0 6rem 0 0;
+    filter: opacity(0.9);
+}
+
+.nav-text {
+    margin-left: 0.75rem;
+    font-size: 16px;
+    margin: 0 0 0 0 1rem
+}
+
+.nav-text:first-child {
+    font-size: 19px;
+    margin: 0 0.5rem;
+}
+
+.fa-primary {
+    color: var(--color-primary);
+}
+  
+.fa-secondary {
+    color: var(--color-secondary);
+}
+
+.slide-show {
+    height: calc(100vh - 4rem);
+}
+
+.slide-img {
+    height: calc(100vh - 4rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-img {
+    align-self: center;
+}
+
+.slide-texttitle {
+    letter-spacing: 3px;
+    font-size: 22px;
+}
+
+.slide-text {
+    background-color: #00000080;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: var(--transition-time) var(--transition-type);
+}
+
+.slide-text:hover {
+    background-color: #10101080;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .slide-img img {
+        width: 100vw;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .slide-img img{
+        height: 100vh;
+    }
+}
+
+.main-content {
+    padding: 2rem 5rem
+}
+
+@media (max-width:800px) {
+    .navbar {
+        bottom: 0px;
+    }
+
+    .nav-text {
+        display: none;
+    }
+
+    .nav-logo {
+        display: none;
+    }
+
+    .nav-element {
+        float: left;
+        padding: 0 auto;
+    }
+}
+
+@media (min-width:800px) {
+    .navbar {
+        top:0;
+    }
+
+    .slide-img{
+        margin-top: 4rem;
+    }
+}
