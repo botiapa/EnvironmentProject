@@ -1,53 +1,86 @@
-/* Fontok */
+/* Változók */
+:root {
+    /* Színek definiálása */
 
+    --transition-time:              300ms;
+    --transition-type:               ease;
+
+    --color-primary:            #12e6bc;
+    --color-secondary:          #a4edeb;
+
+    --color-text:               #000000;
+    --color-higklight-hover:    #aaaaaa;
+
+    --color-bg-primary:         #e6e6e6;
+    --color-bg-secondary:       #dbdbdb;
+
+    --slide-color-text:         #1b1b1b;
+    --slide-content-bg:       #ffffff80;
+    --slide-content-bg-hover: #ffffff60;
+
+    --body-bg-color:            #ffffff;
+    --content-color:            #000000;
+}
+
+.light {
+    /* Színek definiálása */
+    --color-primary:            #12e6bc;
+    --color-secondary:          #a4edeb;
+
+    --color-text:               #000000;
+    --color-higklight-hover:    #aaaaaa;
+
+    --color-bg-primary:         #e6e6e6;
+    --color-bg-secondary:       #dbdbdb;
+
+    --slide-color-text:         #d6d6d6;
+
+    --slide-color-text:         #1b1b1b;
+    --slide-content-bg:       #ffffff80;
+    --slide-content-bg-hover: #ffffff60;
+
+    --body-bg-color:            #ffffff;
+    --content-color:            #000000;
+}
+
+.dark {
+    /* Színek definiálása */
+
+    --color-primary:            #71b4ff;
+    --color-secondary:          #9cff5b;
+
+    --color-text:               #e0e0e0;
+    --color-higklight-hover:    #a0a0a0;
+
+    --color-bg-primary:         #474747;
+    --color-bg-secondary:       #494949;
+
+    --slide-color-text:         #d1d1d1;
+    --slide-content-bg:       #00000080;
+    --slide-content-bg-hover:  #000000060;
+
+    --body-bg-color:            #585858;
+    --content-color:            #dadada;
+}
+
+/* Globális Beállítások */
+/* Fontok */
 @font-face {
     font-family: Accuratist;
     src: url("../font/Accuratist.ttf");
 }
 
-:root {
-    /* Színek definiálása */
-    --color-primary: #12e6bc;
-    --color-secondary: #a4edeb;
-    --color-text: #000000;
-    --color-higklight-hover: #aaaaaa;
-    --color-bg-primary: #e6e6e6;
-    --color-bg-secondary: #dbdbdb;
-    --transition-time: 300ms;
-    --transition-type: ease;
-}
-
-.light {
-    /* Színek definiálása */
-    --color-primary: #12e6bc;
-    --color-secondary: #a4edeb;
-    --color-text: #000000;
-    --color-higklight-hover: #aaaaaa;
-    --color-bg-primary: #e6e6e6;
-    --color-bg-secondary: #dbdbdb;
-    --transition-time: 300ms;
-    --transition-type: ease;
-}
-
-.dark {
-    /* Színek definiálása */
-    --color-primary: #08a6f0;
-    --color-secondary: #7cffb7;
-    --color-text: #dddddd;
-    --color-higklight-hover: #4d4d4d;
-    --color-bg-primary: #535353;
-    --color-bg-secondary: #424242;
-    --transition-time: 300ms;
-    --transition-type: ease;
-}
-
+/* Body */
 body {
+    background-color: var(--body-bg-color);
+    color: var(--content-color);
     font-family: Montserrat;
     font-size: 14px;
     margin: 0;
     padding: 0;
 }
 
+/* Scrollbar beállítások */
 body::-webkit-scrollbar {
     width: 0.25rem;
 }
@@ -60,20 +93,47 @@ body::-webkit-scrollbar-thumb {
     background: var(--color-higklight-hover);
 }
 
-.parallax {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+/* Menü */
+
+@media (min-width:600px) {
+    .navbar {
+        display: block;
+    }
+
+    .nav-element {
+        float: left;
+    }
+    
+    .nav-element:last-child {
+        float: right;
+    }
+
+    .nav-logo {
+        font-size: 19px;
+        letter-spacing: 1px;
+        margin: 0 6rem 0 0;
+        filter: opacity(0.9);
+        font-family: Accuratist;
+    }
 }
 
-.block {
-    height: 100%;
-    width: 100%;
+@media (max-width:600px) {
+    .navbar {
+        display: flex;
+        bottom: 0;
+        align-items: center;
+    }
+
+    .nav-logo {
+        display: none;
+    }
+
+    .nav-text {
+        display: none;
+    }
 }
 
 .navbar {
-    display: block;
     list-style-type: none;
     overflow: hidden;
     position: fixed;
@@ -87,22 +147,13 @@ body::-webkit-scrollbar-thumb {
     backdrop-filter: saturate(180%) blur(20px);
 }
 
-.nav-element {
-    float: left;
-}
-
-.nav-element:last-child {
-    float: right;
-}
-
-.nav-link {
+.nav-link {    
     display: flex;
     align-items: center;
     border-bottom: 3px solid var(--color-bg-primary);
     height: 4rem;
-    padding: 0 1.5rem;
     margin: 0;
-    text-align: center;
+    padding: 0 1.5rem;
     text-decoration: none;
     transition: var(--transition-time) var(--transition-type);
     color: var(--color-text);
@@ -124,14 +175,6 @@ body::-webkit-scrollbar-thumb {
     filter: grayscale(0%) opacity(1) brightness(80%);
 }
 
-.nav-logo {
-    font-size: 19px;
-    letter-spacing: 1px;
-    margin: 0 6rem 0 0;
-    filter: opacity(0.9);
-    font-family: Accuratist;
-}
-
 .nav-text {
     margin-left: 0.75rem;
     font-size: 16px;
@@ -151,6 +194,7 @@ body::-webkit-scrollbar-thumb {
     color: var(--color-secondary);
 }
 
+/* Slide Show */
 .slide-show {
     height: calc(100vh - 4rem);
 }
@@ -162,17 +206,14 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
 }
 
-.slide-img {
-    align-self: center;
-}
-
 .slide-texttitle {
     letter-spacing: 3px;
     font-size: 22px;
 }
 
 .slide-text {
-    background-color: #00000080;
+    background-color: var(--slide-content-bg);
+    color: var(--slide-color-text);
     border-radius: 0.5rem;
     padding: 1.5rem;
     transition: var(--transition-time) var(--transition-type);
@@ -181,7 +222,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .slide-text:hover {
-    background-color: #10101080;
+    background-color: var(--slide-content-bg-hover);
 }
 
 @media (min-aspect-ratio: 16/9) {
@@ -196,31 +237,24 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-.main-content {
-    padding: 2rem 5rem
-}
-
-@media (max-width:800px) {
-    .navbar {
-        bottom: 0px;
-    }
-    .nav-text {
-        display: none;
-    }
-    .nav-logo {
-        display: none;
-    }
-    .nav-element {
-        float: left;
-        padding: 0 auto;
-    }
-}
-
-@media (min-width:800px) {
-    .navbar {
-        top: 0;
-    }
+@media (min-width:600px) {
     .slide-img {
         margin-top: 4rem;
     }
+}
+
+
+
+
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.block {
+    height: 100%;
+    width: 100%;
 }
