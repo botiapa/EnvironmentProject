@@ -14,6 +14,38 @@
     
 }
 
+.light {
+
+    /* Színek definiálása */
+    --color-primary:            #12e6bc;
+    --color-secondary:          #a4edeb;
+
+    --color-text:               #000000;
+    --color-higklight-hover:    #aaaaaa;
+
+    --color-bg-primary:         #e6e6e6;
+    --color-bg-secondary:       #dbdbdb;
+
+    --transition-time:            300ms;
+    --transition-type:            ease;
+}
+
+.dark {
+
+    /* Színek definiálása */
+    --color-primary:            #08a6f0;
+    --color-secondary:          #7cffb7;
+
+    --color-text:               #dddddd;
+    --color-higklight-hover:    #4d4d4d;
+
+    --color-bg-primary:         #535353;
+    --color-bg-secondary:       #424242;
+
+    --transition-time:            300ms;
+    --transition-type:            ease;
+}
+
 body {
     font-family: Montserrat;
     font-size: 14px;
