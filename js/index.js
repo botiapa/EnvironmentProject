@@ -10,13 +10,13 @@ document.body.onload = function() {
     });
 }
 
-function displayTheme(toggle=false) {
+function displayTheme(toggle = false) {
     var current_theme = getCookie("theme") == "" ? "light" : getCookie("theme"); // If the cookie is null, treat it as if it were light
     var toggled_theme = current_theme == LIGHT_THEME ? DARK_THEME : LIGHT_THEME; // Decide what the toggled theme should be
-    
+
     HTML.classList.remove(LIGHT_THEME, DARK_THEME) // Reset the theme
-    // Toggle and display
-    if(toggle) {
+        // Toggle and display
+    if (toggle) {
         createCookie("theme", toggled_theme);
         HTML.classList.add(toggled_theme);
     }
@@ -46,28 +46,3 @@ function getCookie(cname) {
 function createCookie(cname, cvalue, expire = "10000") {
     document.cookie = `${cname}=${cvalue};expires=${expire};path=/`
 }
-
-function clamp(num, min, max) {
-    return num <= min ? min : num >= max ? max : num;
-}
-
-$(window).on("scroll touchmove", function() {
-    var current_theme = getCookie("theme") == "" ? "light" : getCookie("theme"); // If the cookie is null, treat it as if it were light  
-
-    console.log(current_theme);
-
-    var navbar = document.getElementById('navigationbar');
-
-    if (window.pageYOffset > 0 && window.pageYOffset < 20) {
-        if (current_theme == "light") {
-            navbar.style.backgroundColor = '#e6e6e6' + clamp(window.pageYOffset, 126, 255).toString(16);
-            navbar.style.backgroundColor = '#dbdbdb' + clamp(window.pageYOffset, 126, 255).toString(16);
-        }
-
-        if (current_theme == "dark") {
-            navbar.style.backgroundColor = '#535353' + clamp(window.pageYOffset, 126, 255).toString(16);
-            navbar.style.backgroundColor = '#424242' + clamp(window.pageYOffset, 126, 255).toString(16);
-        }
-    }
-
-});
