@@ -1,49 +1,44 @@
+/* Fontok */
+
+@font-face {
+    font-family: Accuratist;
+    src: url("../font/Accuratist.ttf");
+}
+
 :root {
     /* Színek definiálása */
-    --color-primary:            #12e6bc;
-    --color-secondary:          #a4edeb;
-
-    --color-text:               #000000;
-    --color-higklight-hover:    #aaaaaa;
-
-    --color-bg-primary:         #e6e6e6;
-    --color-bg-secondary:       #dbdbdb;
-
-    --transition-time:            300ms;
-    --transition-type:            ease;
-    
+    --color-primary: #12e6bc;
+    --color-secondary: #a4edeb;
+    --color-text: #000000;
+    --color-higklight-hover: #aaaaaa;
+    --color-bg-primary: #e6e6e6;
+    --color-bg-secondary: #dbdbdb;
+    --transition-time: 300ms;
+    --transition-type: ease;
 }
 
 .light {
-
     /* Színek definiálása */
-    --color-primary:            #12e6bc;
-    --color-secondary:          #a4edeb;
-
-    --color-text:               #000000;
-    --color-higklight-hover:    #aaaaaa;
-
-    --color-bg-primary:         #e6e6e6;
-    --color-bg-secondary:       #dbdbdb;
-
-    --transition-time:            300ms;
-    --transition-type:            ease;
+    --color-primary: #12e6bc;
+    --color-secondary: #a4edeb;
+    --color-text: #000000;
+    --color-higklight-hover: #aaaaaa;
+    --color-bg-primary: #e6e6e6;
+    --color-bg-secondary: #dbdbdb;
+    --transition-time: 300ms;
+    --transition-type: ease;
 }
 
 .dark {
-
     /* Színek definiálása */
-    --color-primary:            #08a6f0;
-    --color-secondary:          #7cffb7;
-
-    --color-text:               #dddddd;
-    --color-higklight-hover:    #4d4d4d;
-
-    --color-bg-primary:         #535353;
-    --color-bg-secondary:       #424242;
-
-    --transition-time:            300ms;
-    --transition-type:            ease;
+    --color-primary: #08a6f0;
+    --color-secondary: #7cffb7;
+    --color-text: #dddddd;
+    --color-higklight-hover: #4d4d4d;
+    --color-bg-primary: #535353;
+    --color-bg-secondary: #424242;
+    --transition-time: 300ms;
+    --transition-type: ease;
 }
 
 body {
@@ -56,11 +51,11 @@ body {
 body::-webkit-scrollbar {
     width: 0.25rem;
 }
-  
+
 body::-webkit-scrollbar-track {
     background: var(--color-bg-primary);
 }
-  
+
 body::-webkit-scrollbar-thumb {
     background: var(--color-higklight-hover);
 }
@@ -71,12 +66,10 @@ body::-webkit-scrollbar-thumb {
     overflow: hidden;
     position: fixed;
     z-index: 11;
-
     margin: 0;
     padding: 0;
     height: 4rem;
     width: 100vw;
-
     background-color: var(--color-bg-primary);
 }
 
@@ -91,16 +84,12 @@ body::-webkit-scrollbar-thumb {
 .nav-link {
     display: flex;
     align-items: center;
-    
     border-bottom: 3px solid var(--color-bg-primary);
     height: 4rem;
-
     padding: 0 1.5rem;
     margin: 0;
-
     text-align: center;
     text-decoration: none;
-    
     transition: var(--transition-time) var(--transition-type);
     color: var(--color-text);
 }
@@ -126,6 +115,7 @@ body::-webkit-scrollbar-thumb {
     letter-spacing: 1px;
     margin: 0 6rem 0 0;
     filter: opacity(0.9);
+    font-family: Accuratist;
 }
 
 .nav-text {
@@ -142,7 +132,7 @@ body::-webkit-scrollbar-thumb {
 .fa-primary {
     color: var(--color-primary);
 }
-  
+
 .fa-secondary {
     color: var(--color-secondary);
 }
@@ -185,7 +175,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (max-aspect-ratio: 16/9) {
-    .slide-img img{
+    .slide-img img {
         height: 100vh;
     }
 }
@@ -198,15 +188,12 @@ body::-webkit-scrollbar-thumb {
     .navbar {
         bottom: 0px;
     }
-
     .nav-text {
         display: none;
     }
-
     .nav-logo {
         display: none;
     }
-
     .nav-element {
         float: left;
         padding: 0 auto;
@@ -215,10 +202,9 @@ body::-webkit-scrollbar-thumb {
 
 @media (min-width:800px) {
     .navbar {
-        top:0;
+        top: 0;
     }
-
-    .slide-img{
+    .slide-img {
         margin-top: 4rem;
     }
 }
