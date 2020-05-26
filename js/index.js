@@ -4,10 +4,6 @@ const HTML = document.documentElement;
 
 document.body.onload = function() {
     displayTheme(); // Display current theme
-    var images = document.querySelectorAll('img');
-    new simpleParallax(images, {
-        scale: 1.5
-    });
 }
 
 function displayTheme(toggle = false) {
