@@ -60,6 +60,18 @@ body::-webkit-scrollbar-thumb {
     background: var(--color-higklight-hover);
 }
 
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.block {
+    height: 100%;
+    width: 100%;
+}
+
 .navbar {
     display: block;
     list-style-type: none;

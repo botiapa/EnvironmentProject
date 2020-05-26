@@ -4,7 +4,10 @@ const HTML = document.documentElement;
 
 document.body.onload = function() {
     displayTheme(); // Display current theme
-    console.log(getCookie("theme"));
+    var images = document.querySelectorAll('img');
+    new simpleParallax(images, {
+        scale: 1.5
+    });
 }
 
 function displayTheme(toggle=false) {
@@ -20,8 +23,6 @@ function displayTheme(toggle=false) {
     // Just display
     else
         HTML.classList.add(current_theme);
-
-    
 }
 
 // An optimized function for getting cookies
