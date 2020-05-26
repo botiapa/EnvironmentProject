@@ -176,6 +176,8 @@ body::-webkit-scrollbar-thumb {
     border-radius: 0.5rem;
     padding: 1.5rem;
     transition: var(--transition-time) var(--transition-type);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    backdrop-filter: saturate(180%) blur(10px);
 }
 
 .slide-text:hover {
