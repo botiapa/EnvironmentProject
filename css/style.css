@@ -11,8 +11,8 @@
     --color-secondary: #a4edeb;
     --color-text: #000000;
     --color-higklight-hover: #aaaaaa;
-    --color-bg-primary: #e6e6e67e;
-    --color-bg-secondary: #dbdbdb7e;
+    --color-bg-primary: #e6e6e6;
+    --color-bg-secondary: #dbdbdb;
     --transition-time: 300ms;
     --transition-type: ease;
 }
@@ -23,8 +23,8 @@
     --color-secondary: #a4edeb;
     --color-text: #000000;
     --color-higklight-hover: #aaaaaa;
-    --color-bg-primary: #e6e6e67e;
-    --color-bg-secondary: #dbdbdb7e;
+    --color-bg-primary: #e6e6e6;
+    --color-bg-secondary: #dbdbdb;
     --transition-time: 300ms;
     --transition-type: ease;
 }
@@ -35,8 +35,8 @@
     --color-secondary: #7cffb7;
     --color-text: #dddddd;
     --color-higklight-hover: #4d4d4d;
-    --color-bg-primary: #5353537e;
-    --color-bg-secondary: #4242427e;
+    --color-bg-primary: #535353;
+    --color-bg-secondary: #424242;
     --transition-time: 300ms;
     --transition-type: ease;
 }
