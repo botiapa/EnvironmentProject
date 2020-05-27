@@ -256,18 +256,7 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-
-
-
-
-.parallax {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.block {
-    height: 100%;
-    width: 100%;
+/* Tartalom */
+.main-content {
+    transition: var(--transition-time) var(--transition-type);
 }
