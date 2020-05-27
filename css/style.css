@@ -234,6 +234,10 @@ body::-webkit-scrollbar-thumb {
     backdrop-filter: saturate(180%) blur(10px);
 }
 
+.main-content {
+    transition: var(--transition-time) var(--transition-type);
+}
+
 .slide-text:hover {
     background-color: var(--slide-content-bg-hover);
 }
