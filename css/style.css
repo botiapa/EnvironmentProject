@@ -2,65 +2,62 @@
 :root {
     /* Színek definiálása */
 
-    --transition-time:              300ms;
+    --transition-time:              500ms;
     --transition-type:               ease;
 
-    --color-primary:            #12e6bc;
-    --color-secondary:          #a4edeb;
+    --color-primary:            #ABF568;
+    --color-secondary:          #82DB15;
 
-    --color-text:               #000000;
-    --color-higklight-hover:    #aaaaaa;
+    --color-text:               #111111;
 
-    --color-bg-primary:         #e6e6e6;
-    --color-bg-secondary:       #dbdbdb;
+    --color-bg-primary:         #E6E6E6;
+    --color-bg-secondary:       #E0E0E0;
+    --color-higklight-hover:    #B5B5B5;
 
     --slide-color-text:         #1b1b1b;
-    --slide-content-bg:       #ffffff80;
-    --slide-content-bg-hover: #ffffff60;
+    --slide-content-bg:       #FFFFFF60;
+    --slide-content-bg-hover: #FFFFFF80;
 
-    --body-bg-color:            #ffffff;
+    --body-bg-color:            #FFFFFF;
     --content-color:            #000000;
 }
 
 .light {
     /* Színek definiálása */
-    --color-primary:            #12e6bc;
-    --color-secondary:          #a4edeb;
+    --color-primary:            #ABF568;
+    --color-secondary:          #82DB15;
 
-    --color-text:               #000000;
-    --color-higklight-hover:    #aaaaaa;
+    --color-text:               #111111;
 
-    --color-bg-primary:         #e6e6e6;
-    --color-bg-secondary:       #dbdbdb;
-
-    --slide-color-text:         #d6d6d6;
+    --color-bg-primary:         #E6E6E6;
+    --color-bg-secondary:       #E0E0E0;
+    --color-higklight-hover:    #B5B5B5;
 
     --slide-color-text:         #1b1b1b;
-    --slide-content-bg:       #ffffff80;
-    --slide-content-bg-hover: #ffffff60;
+    --slide-content-bg:       #FFFFFF60;
+    --slide-content-bg-hover: #FFFFFF80;
 
-    --body-bg-color:            #ffffff;
+    --body-bg-color:            #FFFFFF;
     --content-color:            #000000;
 }
 
 .dark {
     /* Színek definiálása */
+    --color-primary:            #AF45EB;
+    --color-secondary:          #536FEB;
 
-    --color-primary:            #71b4ff;
-    --color-secondary:          #9cff5b;
+    --color-text:               #fafafa;
 
-    --color-text:               #e0e0e0;
-    --color-higklight-hover:    #a0a0a0;
+    --color-bg-primary:         #13161F;
+    --color-bg-secondary:       #191D29;
+    --color-higklight-hover:    #2B3145;
 
-    --color-bg-primary:         #474747;
-    --color-bg-secondary:       #494949;
+    --slide-color-text:         #f0f0f0;
+    --slide-content-bg:       #2D2D3360;
+    --slide-content-bg-hover: #2D2D3380;
 
-    --slide-color-text:         #d1d1d1;
-    --slide-content-bg:       #00000080;
-    --slide-content-bg-hover:  #000000060;
-
-    --body-bg-color:            #585858;
-    --content-color:            #dadada;
+    --body-bg-color:            #161820;
+    --content-color:            #ffffff;
 }
 
 /* Globális Beállítások */
@@ -78,6 +75,20 @@ body {
     font-size: 14px;
     margin: 0;
     padding: 0;
+}
+
+.buttons {
+    padding: 0.3rem 0.6rem;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text);
+    border: 3px solid var(--color-higklight-hover);
+    border-image-slice: 1;
+    transition: var(--transition-time) var(--transition-type);
+}
+
+.buttons:hover {
+    border-image-source: linear-gradient(90deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+    background-color: var(--color-bg-secondary);
 }
 
 /* Scrollbar beállítások */
@@ -164,6 +175,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     align-items: center;
     border-bottom: 3px solid var(--color-bg-primary);
+    border-image-slice: 1;
     height: 4rem;
     margin: 0;
     padding: 0 1.5rem;
@@ -175,17 +187,17 @@ body::-webkit-scrollbar-thumb {
 .nav-link svg {
     width: 1.7rem;
     transition: var(--transition-time) var(--transition-type);
-    filter: grayscale(100%) opacity(0.9) brightness(60%);
+    filter: grayscale(100%) opacity(0.9) brightness(80%);
 }
 
 .nav-link:hover {
-    border-bottom: 3px solid var(--color-higklight-hover);
+    border-image-source: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
     background-color: var(--color-bg-secondary);
     color: var(--color-text);
 }
 
 .nav-link:hover svg {
-    filter: grayscale(0%) opacity(1) brightness(80%);
+    filter: grayscale(0%) opacity(1) brightness(100%);
 }
 
 .nav-text {
@@ -263,4 +275,5 @@ body::-webkit-scrollbar-thumb {
 /* Tartalom */
 .main-content {
     transition: var(--transition-time) var(--transition-type);
+    padding: 2rem 5rem;
 }
