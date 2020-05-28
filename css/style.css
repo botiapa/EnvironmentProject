@@ -393,3 +393,21 @@ body::-webkit-scrollbar-thumb {
     border-image-slice: 1;
     border-image-source: linear-gradient(45deg, var(--color-wrong-secondary) 0%, var(--color-wrong-primary) 100%);
 }
+
+/* About Us*/
+
+.about-picture {
+
+}
+
+
+/* Contact Us */
+
+.contact {
+    padding-top: 6rem;
+    
+}
+
+.form-group {
+    font-size: 20px;
+}
