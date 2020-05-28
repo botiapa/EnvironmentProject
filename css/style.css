@@ -344,6 +344,10 @@ body::-webkit-scrollbar-thumb {
     border: 3px solid var(--color-higklight-hover);
 }
 
+.quiz-container {
+    transition: var(--transition-time) var(--transition-type);
+}
+
 .quiz-question {
     width: 100%;
 }
