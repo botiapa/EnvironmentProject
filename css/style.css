@@ -344,6 +344,10 @@ body::-webkit-scrollbar-thumb {
     border: 3px solid var(--color-higklight-hover);
 }
 
+.quiz-container {
+    transition: var(--transition-time) var(--transition-type);
+}
+
 .quiz-question {
     width: 100%;
 }
@@ -388,4 +392,22 @@ body::-webkit-scrollbar-thumb {
     background: linear-gradient(45deg, var(--color-wrong-primary) 0%, var(--color-wrong-secondary) 100%);
     border-image-slice: 1;
     border-image-source: linear-gradient(45deg, var(--color-wrong-secondary) 0%, var(--color-wrong-primary) 100%);
+}
+
+/* About Us*/
+
+.about-picture {
+
+}
+
+
+/* Contact Us */
+
+.contact {
+    padding-top: 6rem;
+    
+}
+
+.form-group {
+    font-size: 20px;
 }
