@@ -28,6 +28,13 @@
     --color-correct-secondary:  #4fc225;
     --color-wrong-primary:      #C20500;
     --color-wrong-secondary:    #800400;
+
+    /* Custom Bootstrap berakpoints */
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 700px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
 }
 
 .light {
@@ -154,6 +161,10 @@ body::-webkit-scrollbar-thumb {
         margin: 0 6rem 0 0;
         filter: opacity(0.9);
     }
+    .main-content {
+        margin-top: 4rem;
+        padding: 2rem 5rem;
+    }
 }
 
 @media (max-width:1000px) {
@@ -191,6 +202,9 @@ body::-webkit-scrollbar-thumb {
 
     .carousel-indicators {
         padding-bottom: 3rem;
+    }
+    .main-content {
+        padding: 0px;
     }
 }
 
@@ -311,11 +325,19 @@ body::-webkit-scrollbar-thumb {
 
 /* Tartalom */
 .main-content {
+    width: 100%;
     transition: var(--transition-time) var(--transition-type);
-    padding: 2rem 5rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 /* Quiz */
+#quiz-main {
+    height: 100%;
+    display: flex;
+}
+
 .quiz {
     background-color: var(--color-bg-primary);
     padding: 1rem;
@@ -324,6 +346,21 @@ body::-webkit-scrollbar-thumb {
 
 .quiz-question {
     width: 100%;
+}
+
+.quiz-answers .row{
+    justify-content: space-evenly;
+}
+
+.quiz-button {
+    width: 100%;
+    display: flex;
+}
+
+.quiz-button button {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem;
 }
 
 .quiz-question-text {
@@ -339,12 +376,6 @@ body::-webkit-scrollbar-thumb {
 
 .quiz-question-picture {
     width: 100%;
-}
-
-.quiz-button {
-    width: 100%;
-    justify-content: center;
-    padding: 0.75rem;
 }
 
 .quiz-correct {
