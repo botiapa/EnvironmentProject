@@ -63,49 +63,30 @@
 
         </ul>
     </nav>
-    <main id="quiz-main">
+    <main>
         <div class="main-content">
-            <div class="container col-md-10">
-                <div class="row">
-                    <div class="col-12 col-md">
-                        <div class="quiz">
-                            <div class="quiz-question">
-                                <img class="img-fluid d-block mx-auto" src="../img/eco_galil.jpg" alt="Galil" class="quiz-question-picture">
-                                <div class="quiz-question-text">
-                                    <span>Ez mi ez?</span>
-                                </div>
-                            </div>
-                            <div class="quiz-answers container">
-                                <div class="row">
-                                    <div class="quiz-button m-1 col-12 col-md-5 p-0">
-                                        <button class="buttons quiz-option-a">
-                                            Lorem
-                                        </button>
-                                    </div>
-                                    <div class="quiz-button m-1 col-12 col-md-5 p-0">
-                                        <button class="buttons quiz-option-b">
-                                            Ipsum
-                                        </button>
-                                    </div>
-                                    <div class="quiz-button m-1 col-12 col-md-5 p-0">
-                                        <button class="buttons quiz-option-c">
-                                            Perhaps
-                                        </button>
-                                    </div>
-                                    <div class="quiz-button m-1 col-12 col-md-5 p-0">
-                                        <button class="buttons quiz-option-d">
-                                            Placeholder Image
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="container">
+                <div class="col">
+                    <div class="row">
+                        <h1>Napelem kalkulátor</h1>
+                        <p>
+                            A 
+                            <select name="panel_type" id="panel_type">
+                                <option value="pn1">Panel1</option>
+                                <option value="pn2">Panel2</option>
+                                <option value="pn3">Panel3</option>
+                                <option value="pn4">Panel4</option>
+                            </select>
+                            típusból panelenként <span id="panel_production"></span> W-ot termel, ami azt jelenti, hogy
+                            <input type="number" name="panel_db" id="panel_db" > db panel összesen <span id="panel_systemproduction"></span> W-ot, azaz <span id="panel_systemproductionkw"></span> áramot termel.
+                        </p>
+                        <p>
+
+                        </p>
                     </div>
                 </div>
             </div>
-            <br>
         </div>
-
     </main>
 
     <!-- SCRIPTS -->
