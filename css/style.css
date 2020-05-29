@@ -344,6 +344,10 @@ body::-webkit-scrollbar-thumb {
     border: 3px solid var(--color-higklight-hover);
 }
 
+.quiz-container {
+    transition: var(--transition-time) var(--transition-type);
+}
+
 .quiz-question {
     width: 100%;
 }
@@ -418,6 +422,11 @@ body::-webkit-scrollbar-thumb {
 
 /* Contact Us */
 
-.contactform {
-    padding-top: 4rem;
+.contact {
+    padding-top: 6rem;
+    
+}
+
+.form-group {
+    font-size: 20px;
 }
