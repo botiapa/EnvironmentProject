@@ -392,8 +392,27 @@ body::-webkit-scrollbar-thumb {
 
 /* About Us*/
 
-.about-picture {
+.about-us {
+    padding-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
 
+.about-us-row {
+    padding: 2rem;
+}
+
+.about-us-card {
+    border: 3px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(45deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+}
+
+.about-picture img{
+    width: 100%;
+    
 }
 
 
