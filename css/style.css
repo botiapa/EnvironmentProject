@@ -89,6 +89,19 @@
 }
 
 /* Body */
+html {
+    transition: var(--transition-time) var(--transition-type);
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
 body {
     background-color: var(--body-bg-color);
     color: var(--content-color);
@@ -395,33 +408,55 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* About Us*/
-
-.about-us {
-    padding-top: 4rem;
+.about-us-main {
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
 }
 
-.about-us-row {
-    padding: 2rem;
+.about-us-container {
+    background-color: var(--color-bg-primary);
+    padding: 0 2rem;
+    border-radius: 1rem;
+    width: 75%;
 }
 
-.about-us-card {
-    border: 3px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(45deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+.about-us-col {
+    padding: 0 1rem;
 }
 
-.about-picture img{
+.about-us-title {
+}
+
+.about-us-title h3 {
     width: 100%;
-    
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.about-us-member {}
+
+.about-us-members img {
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid var(--color-higklight-hover);
+}
+
+.about-us-members p {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 16px;
+}
+
+.about-us-links {
+    padding: 0.5rem;
 }
 
 
 /* Contact Us */
-
 .contact {
     padding-top: 6rem;
     
