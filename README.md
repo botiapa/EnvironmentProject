@@ -1,2 +1,3 @@
-# EnvironmentProject
-This is a repo for a school project.
+---
+permalink: ./html/index.html
+---
