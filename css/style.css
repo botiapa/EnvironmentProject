@@ -359,7 +359,6 @@ body::-webkit-scrollbar-thumb {
 .quiz {
     background-color: var(--color-bg-primary);
     padding: 1rem;
-    border: 3px solid var(--color-higklight-hover);
 }
 
 .quiz-container {
