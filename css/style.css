@@ -31,7 +31,7 @@
 
     /* Custom Bootstrap berakpoints */
     --breakpoint-xs: 0;
-    --breakpoint-sm: 700px;
+    --breakpoint-sm: 764px;
     --breakpoint-md: 768px;
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
@@ -155,7 +155,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Menü */
 
-@media (min-width:700px) {
+@media (min-width:764px) {
     .navbar {
         display: block;
     }
@@ -180,7 +180,7 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-@media (max-width:1000px) {
+@media (max-width:1180px) {
     .nav-text {
         display: none;
     }
@@ -194,7 +194,7 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-@media (max-width:700px) {
+@media (max-width:764px) {
     .navbar {
         display: flex;
         bottom: 0;
