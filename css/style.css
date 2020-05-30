@@ -28,6 +28,7 @@
     --color-correct-secondary:  #4fc225;
     --color-wrong-primary:      #C20500;
     --color-wrong-secondary:    #800400;
+    --dialog-background:        rgba(230, 230, 230, 0.753);
 
     /* Custom Bootstrap berakpoints */
     --breakpoint-xs: 0;
@@ -57,6 +58,7 @@
     --color-bg-selection:       #7e7e7e;
     --color-text-selection:     #dddddd;
     --content-color:            #000000;
+    --dialog-background:        rgba(230, 230, 230, 0.753);
 }
 
 .dark {
@@ -79,6 +81,7 @@
     --color-bg-selection:       #bebebe;
     --color-text-selection:     #ffffff;
     --content-color:            #ffffff;
+    --dialog-background:        rgba(19, 22, 31, 0.753);
 }
 
 /* Globális Beállítások */
@@ -435,17 +438,17 @@ body::-webkit-scrollbar-thumb {
     left: 0;
     right: 0;
     z-index: 2;
-    background-color: var(--color-bg-primary);
+    background-color: var(--dialog-background);
     padding: 2rem 2rem;
     border-radius: 1rem;
     width: 75%;
+    box-shadow: 5px 5px 10px 5px #0000007E ;
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    backdrop-filter: saturate(180%) blur(10px);
 }
 
 .about-us-col {
     padding: 0 1rem;
-}
-
-.about-us-title {
 }
 
 .about-us-title h3 {
@@ -453,8 +456,6 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
     margin: 1rem 0;
 }
-
-.about-us-member {}
 
 .about-us-members img {
     width: 100%;
@@ -482,4 +483,43 @@ body::-webkit-scrollbar-thumb {
 
 .form-group {
     font-size: 20px;
+}
+
+/* Calculator */
+.calculator-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.calculator-container {
+    
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: var(--dialog-background);
+    padding: 2rem 2rem;
+    border-radius: 0.7rem;
+    width: 80%;
+    box-shadow: 5px 5px 10px 5px #0000007E ;
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    backdrop-filter: saturate(180%) blur(10px);
+}
+
+.calculator-background {
+    width: 110vw;
+    min-height: 110vh;
+    position: fixed;
+    left: -10;
+    right: +10;
+    z-index: 1;
+    display: block;
+    background-image: url('../img/bg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-filter: saturate(180%) blur(10px);
+    filter: saturate(180%) blur(10px);
 }
