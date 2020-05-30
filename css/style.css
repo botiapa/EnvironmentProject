@@ -32,6 +32,7 @@
     --color-wrong-secondary:    #800400;
     --dialog-background:        rgba(230, 230, 230, 0.753);
     --bg-britness:                   100%;
+    --bg-input:                 #e6e6e6;
 
     /* Custom Bootstrap berakpoints */
     --breakpoint-xs: 0;
@@ -63,6 +64,7 @@
     --content-color:            #000000;
     --dialog-background:        rgba(230, 230, 230, 0.829);
     --bg-britness:                   100%;
+    --bg-input:                 #e6e6e6;
 }
 
 .dark {
@@ -87,6 +89,7 @@
     --content-color:            #ffffff;
     --dialog-background:        rgba(19, 22, 31, 0.856);
     --bg-britness:                    60%;
+    --bg-input:                 #ececec;
 }
 
 /* Globális Beállítások */
@@ -497,12 +500,17 @@ body::-webkit-scrollbar-thumb {
 
 /* Contact Us */
 
+.main-contact {
+    padding: 0 2rem;
+    width: 100%;
+}
+
 #left-column .row {
-    margin-bottom: 0.2rem;
+    width: 100%;
 }
 
 .contact {
-    padding-top: 6rem;
+    padding: 6rem 0 2rem 0;
 }
 
 .contact h1 {
@@ -519,13 +527,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 .contact input, .contact textarea {
-    background-color: #f4f5f7;
+    background-color: var(--bg-input);
     border-width: 0px;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 .contact form label {
-    margin-left: 10px;
+    margin: 0.5rem 15px 0.25rem 15px;
 }
 
 .form-group {
@@ -550,10 +558,19 @@ body::-webkit-scrollbar-thumb {
 
 .form-group input {
     padding-left: 10px;
+    outline: none;
 }
 
 .form-group textarea {
     padding: 10px;
+    outline: none;
+    resize: none;
+}
+
+@media (max-width:764px) {
+    .contact {
+        padding: 2rem 0 6rem 0; 
+    }
 }
 
 /* Calculator */
