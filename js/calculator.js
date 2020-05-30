@@ -1,7 +1,6 @@
 var paneltypes = { pn1:[300, 250000], pn2:[350, 300000], pn3:[400, 350000], pn4:[450, 400000] };
 var inverters = { fivekw:500000, tenkw:1000000, more:1500000 }
 var smartsystem = 25000;
-var 
 
 function calculate()
 {
