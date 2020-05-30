@@ -3,7 +3,9 @@
     /* Színek definiálása */
 
     --transition-time:              500ms;
+    --transition-time-fast:         150ms;
     --transition-type:               ease;
+    --transition-type-alternative:               ease-in-out;
 
     --color-primary:            #ABF568;
     --color-secondary:          #82DB15;
@@ -476,13 +478,64 @@ body::-webkit-scrollbar-thumb {
 
 
 /* Contact Us */
+
+#left-column .row {
+    margin-bottom: 0.2rem;
+}
+
 .contact {
     padding-top: 6rem;
-    
+}
+
+.contact h1 {
+    font-weight: bolder;
+    text-align: center;
+}
+
+.contact h3 {
+    text-align: center;
+}
+
+#left-column form div div{ /* All of the rows and cols inside the form */
+    padding: 0px;
+}
+
+.contact input, .contact textarea {
+    background-color: #f4f5f7;
+    border-width: 0px;
+    margin-left: 10px;
+}
+
+.contact form label {
+    margin-left: 10px;
 }
 
 .form-group {
-    font-size: 20px;
+   margin: 0px;
+}
+
+#contact-button {
+    background-color: #f68c40;
+    color: var(--content-color);
+    transition: background-color var(--transition-time-fast) var(--transition-type-alternative);
+}
+
+#contact-button:hover {
+    background-color: var(--body-bg-color);
+    border: #f68c40 1px solid;
+}
+
+#left-column input, #left-column textarea{
+    width: 100%;
+    height: 2.5rem;
+}
+
+.form-group input {
+    padding-left: 10px;
+}
+
+.form-group textarea {
+    padding: 10px;
 }
 
 /* Calculator */
