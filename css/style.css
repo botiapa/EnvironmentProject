@@ -418,6 +418,7 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     width: 100vw;
     min-height: 100vh;
+    background-color: #000;
 }
 .about-us-main-background {
     width: 110vw;
