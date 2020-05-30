@@ -545,10 +545,11 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     width: 100vw;
     min-height: 100vh;
+    overflow: hidden;
+    background-color: #000;
 }
 
 .calculator-container {
-    
     position: fixed;
     left: 0;
     right: 0;
@@ -563,16 +564,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 .calculator-background {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     position: fixed;
+    top: 0;
     left: 0;
-    right: 0;
     z-index: 1;
-    transform: scale(1.1);
+    transform: scale(1);
     display: block;
     background-image: url('../img/bg2.jpg');
-    background-repeat: no-repeat;
     background-size: cover;
     -webkit-filter: saturate(180%) blur(10px);
     filter: saturate(180%) blur(10px);
