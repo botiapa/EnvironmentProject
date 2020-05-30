@@ -1,3 +1,3 @@
 ---
-permalink: /html/index
+permalink: /html
 ---
