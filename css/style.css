@@ -415,10 +415,28 @@ body::-webkit-scrollbar-thumb {
     width: 100vw;
     min-height: 100vh;
 }
+.about-us-main-background {
+    width: 110vw;
+    min-height: 110vh;
+    position: fixed;
+    left: -10;
+    right: +10;
+    z-index: 1;
+    display: block;
+    background-image: url('../img/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-filter: saturate(180%) blur(10px);
+    filter: saturate(180%) blur(10px);
+}
 
 .about-us-container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 2;
     background-color: var(--color-bg-primary);
-    padding: 0 2rem;
+    padding: 2rem 2rem;
     border-radius: 1rem;
     width: 75%;
 }
