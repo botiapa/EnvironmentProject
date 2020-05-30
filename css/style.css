@@ -563,12 +563,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 .calculator-background {
-    width: 110vw;
-    min-height: 110vh;
+    width: 100vw;
+    min-height: 100vh;
     position: fixed;
-    left: -10;
-    right: +10;
+    left: 0;
+    right: 0;
     z-index: 1;
+    transform: scale(1.1);
     display: block;
     background-image: url('../img/bg2.jpg');
     background-repeat: no-repeat;
