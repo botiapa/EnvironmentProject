@@ -703,4 +703,11 @@ footer a:hover {
     width: 100%;
     max-width: 1080px;
     height: auto;
-  }
+}
+
+/* Disable animations on mobile */
+@media (max-width:764px) {
+    * {
+        transition: none !important;
+    }
+}
