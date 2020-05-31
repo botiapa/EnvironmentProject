@@ -1,26 +1,44 @@
-var paneltypes = { pn1:[300, 250000], pn2:[350, 300000], pn3:[400, 350000], pn4:[450, 400000] };
-var inverters = { fivekw:500000, tenkw:1000000, more:1500000 }
+var paneldata = { cost: 125000, watt:280};
+var inverters = { twok:250000, threek:300000, fourk:400000, fivek:500000, more:1000000 };
 var smartsystem = 25000;
+
+var electricityCost = 48;
+
+var months = [0.166, 0.416, 0.65, 0.75, 0.83, 1, 0.96, 0.90, 0.78, 0.541, 0.209];
 
 var main = document.getElementById('calc-main_js');
 addEventListener("load", calculate);
 
 function calculate()
 {
-    var panel_type = document.getElementById('panel_type').value;
-    var panel_count = document.getElementById('panel_db').value;
-    var daily_usage = document.getElementById('daily_usage').value;
+    // GET INPUTS AND REQUIRED ELEMENTS
+    var monthly_cost = document.getElementById('monthly_electricity_cost').value;
 
-    var selected_panel = paneltypes[panel_type];
-    var system_prod = selected_panel[0] * panel_count;
-    var daily_prod = system_prod * 9; // KB 9 óra napfénnyel számolunk
+    var monthly_wattage = document.getElementById('monthly_wattage');
+    var panel_count = document.getElementById('panel_count');
+    var system_cost = document.getElementById('system_cost');
+    var monthly_generated = document.getElementById('monthly_generated');
+    var yearly_generated = document.getElementById('yearly_generated');
+    var daily_prod = document.getElementById('daily_prod');
 
-    document.getElementById('panel_production').innerHTML = selected_panel[0];
-    document.getElementById('panel_systemproduction').innerHTML = system_prod;
-    document.getElementById('panel_systemproductionkw').innerHTML = system_prod/1000;
-    document.getElementById('panel_dailyproduction').innerHTML = daily_prod/1000;
+    monthly_wattage.innerHTML =  Math.round(monthly_cost / electricityCost);
+    
+    var panel_monthly_generated = paneldata.watt * 10 * 30 / 1000;
+    panel_count.innerHTML = Math.ceil(monthly_wattage.innerHTML/panel_monthly_generated);
 
-    var smart_system = document.getElementById('system_type').value == "smart" ? smartsystem : 0;
-    var inverter = system_prod/1000 <= 5 ? inverters.fivekw : system_prod/1000 <= 10 ? inverters.tenkw : inverters.more;
-    document.getElementById('system_price').innerHTML = selected_panel[1] * panel_count + inverter + panel_count * smart_system;
+    daily_prod.innerHTML = paneldata.watt * panel_count.innerHTML;
+
+    var temp = paneldata.watt * panel_count.innerHTML;
+    var inverter = temp <= 2000 ? inverters.twok : temp <= 3000 ? inverters.threek : temp <= 4000 ? inverters.fourk : temp <= 5000 ? inverters.fivek : inverters.more;
+    var smart = document.getElementById('system_type').value == 'smart' ? smartsystem : 0;
+    system_cost.innerHTML = panel_count.innerHTML * paneldata.cost + inverter + smart * panel_count.innerHTML;
+
+    monthly_generated.innerHTML = panel_monthly_generated * panel_count.innerHTML;
+
+    var yearly_sum = 0;
+    months.forEach(element => {
+        yearly_sum += monthly_generated.innerHTML * element;
+    });
+
+    yearly_generated.innerHTML = yearly_sum / 1000;
 }
