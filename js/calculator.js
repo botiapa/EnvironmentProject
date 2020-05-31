@@ -2,6 +2,9 @@ var paneltypes = { pn1:[300, 250000], pn2:[350, 300000], pn3:[400, 350000], pn4:
 var inverters = { fivekw:500000, tenkw:1000000, more:1500000 }
 var smartsystem = 25000;
 
+var main = document.getElementById('calc-main_js');
+addEventListener("load", calculate);
+
 function calculate()
 {
     var panel_type = document.getElementById('panel_type').value;
