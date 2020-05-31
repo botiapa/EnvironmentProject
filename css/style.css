@@ -411,6 +411,13 @@ footer a:hover {
 }
 
 /* Tartalom */
+@media (max-width:764px) {
+    .display-4 {
+        font-size: 36px;
+    }
+}
+
+
 .parallex {
     width: 100%;
     background-position: center;
