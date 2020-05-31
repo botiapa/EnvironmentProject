@@ -411,12 +411,25 @@ footer a:hover {
     padding: 1rem;
 }
 
+#quiz-result .jumbotron {
+    background-color: var(--color-bg-primary);;
+}
+
+#quiz-result {
+    color: var(--color-text);
+}
+
 .quiz-container {
     transition: var(--transition-time) var(--transition-type);
 }
 
 .quiz-question {
     width: 100%;
+    max-width: 75rem;
+}
+
+.quiz-question img {
+    max-height: 30rem;
 }
 
 .quiz-answers .row{
