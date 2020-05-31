@@ -770,7 +770,7 @@ footer a:hover {
 .table {
     color: var(--color-text);
     border-color: var(--color-text);
-    width: 80vw;
+    width: 80%;
     margin: auto;
     margin-bottom: 10rem;
 }
