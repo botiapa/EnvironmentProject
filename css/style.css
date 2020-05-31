@@ -765,3 +765,8 @@ footer a:hover {
         transition: none !important;
     }
 }
+
+.table {
+    color: var(--color-text);
+    border-color: var(--color-text);
+}
