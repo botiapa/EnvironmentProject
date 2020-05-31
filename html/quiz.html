@@ -71,7 +71,7 @@
                 <div class="row">
                     <div class="col-12 col-md">
                         <div class="quiz">
-                            <div class="quiz-question">
+                            <div class="quiz-question container">
                                 <img class="img-fluid d-block mx-auto" src="../img/solar_panels.jpg" alt="Galil" class="quiz-question-picture">
                                 <div class="quiz-question-text">
                                     <span>Miből generálnak energiát a napelemek?</span>
@@ -105,11 +105,19 @@
                     </div>
                 </div>
             </div>
+            <div id="quiz-result" style="display: none;">
+                <div class="jumbotron">
+                    <div class="display-2">
+                        Gratulálok, <span class="quiz-result-score">10</span> kérdésből, <span id="good-answers" class="quiz-result-score"></span> válaszod jó lett!
+                    </div>
+                    <div class="lead">Ez azt jelenti, hogy a válaszaid <span id="answers-rate"></span>%-ban jók voltak</div>
+                </div>
+            </div>
             <div class="quiz-container container col-md-10" style="display:none;">
                 <div class="row">
                     <div class="col-12 col-md">
                         <div class="quiz">
-                            <div class="quiz-question">
+                            <div class="quiz-question container">
                                 <img class="img-fluid d-block mx-auto" src="../img/solar_panels.jpg" class="quiz-question-picture">
                                 <div class="quiz-question-text">
                                     <span>Általában hány év garanciát lehet igényelni a napelemekre?</span>
@@ -147,7 +155,7 @@
                 <div class="row">
                     <div class="col-12 col-md">
                         <div class="quiz">
-                            <div class="quiz-question">
+                            <div class="quiz-question container">
                                 <img class="img-fluid d-block mx-auto" src="../img/solar_panels.jpg" alt="Galil" class="quiz-question-picture">
                                 <div class="quiz-question-text">
                                     <span>Általában hány év az élettartama egy napelemnek?</span>
@@ -185,7 +193,7 @@
                 <div class="row">
                     <div class="col-12 col-md">
                         <div class="quiz">
-                            <div class="quiz-question">
+                            <div class="quiz-question container">
                                 <img class="img-fluid d-block mx-auto" src="../img/solar_panel_farm.jfif" alt="Galil" class="quiz-question-picture">
                                 <div class="quiz-question-text">
                                     <span>Vajon mire nézve veszélyes egy ilyen fajta erőmű?</span>
@@ -223,7 +231,7 @@
                 <div class="row">
                     <div class="col-12 col-md">
                         <div class="quiz">
-                            <div class="quiz-question">
+                            <div class="quiz-question container">
                                 <img class="img-fluid d-block mx-auto" src="../img/solar_panel_house.jfif" alt="Galil" class="quiz-question-picture">
                                 <div class="quiz-question-text">
                                     <span>Vajon mikor érdemes napelemeket telepíteni a házra?</span>
@@ -261,7 +269,7 @@
                 <div class="row">
                     <div class="col-12 col-md">
                         <div class="quiz">
-                            <div class="quiz-question">
+                            <div class="quiz-question container">
                                 <img class="img-fluid d-block mx-auto" src="../img/wind_turbines.jpg" alt="Galil" class="quiz-question-picture">
                                 <div class="quiz-question-text">
                                     <span>Hány fázisú energiát termel egy szélturbina?</span>
@@ -299,7 +307,7 @@
                 <div class="row">
                     <div class="col-12 col-md">
                         <div class="quiz">
-                            <div class="quiz-question">
+                            <div class="quiz-question container">
                                 <img class="img-fluid d-block mx-auto" src="../img/wind_turbines.jpg" alt="Galil" class="quiz-question-picture">
                                 <div class="quiz-question-text">
                                     <span>Mennyitől optimális egy szél turbina átlagsebessége?</span>
@@ -337,7 +345,7 @@
                 <div class="row">
                     <div class="col-12 col-md">
                         <div class="quiz">
-                            <div class="quiz-question">
+                            <div class="quiz-question container">
                                 <img class="img-fluid d-block mx-auto" src="../img/wind_turbines.jpg" alt="Galil" class="quiz-question-picture">
                                 <div class="quiz-question-text">
                                     <span>Mennyire elterjedt a szélturbinák használata?</span>
@@ -360,7 +368,7 @@
                                             Országtól, és területi elérhetőség alapján eltérő. Van ország ahol a teljes energia termelés 40%-át szél turbinák teszik ki.
                                         </button>
                                     </div>
-                                    <div class="quiz-button m-1 col-12 col-md-5 p-0">
+                                    <div class="quiz-button m-1 col-12 col-md-5 p-0 correct">
                                         <button class="buttons quiz-option-d">
                                             Európában már sok helyen használják ezt a technológiát, de sajnos Amerikában még nem elterjedt.
                                         </button>
@@ -375,32 +383,32 @@
                 <div class="row">
                     <div class="col-12 col-md">
                         <div class="quiz">
-                            <div class="quiz-question">
-                                <img class="img-fluid d-block mx-auto" src="../img/electroniccar.jpg" alt="Galil" class="quiz-question-picture">
+                            <div class="quiz-question container">
+                                <img class="img-fluid d-block mx-auto" src="../img/tesla_model_s.jpg" alt="Galil" class="quiz-question-picture">
                                 <div class="quiz-question-text">
-                                    <span>Ez mi ez?</span>
+                                    <span>Általában mennyi időbe telik feltölteni egy elektromos autót?</span>
                                 </div>
                             </div>
                             <div class="quiz-answers container">
                                 <div class="row">
-                                    <div class="quiz-button m-1 col-12 col-md-5 p-0 correct">
+                                    <div class="quiz-button m-1 col-12 col-md-5 p-0">
                                         <button class="buttons quiz-option-a">
-                                            Lorem
+                                            Akár 1-2 óra.
                                         </button>
                                     </div>
-                                    <div class="quiz-button m-1 col-12 col-md-5 p-0">
+                                    <div class="quiz-button m-1 col-12 col-md-5 p-0 correct">
                                         <button class="buttons quiz-option-b">
-                                            Ipsum
+                                            Egy egész éjszaka kell hozzá, tehát 7-9 óra.
                                         </button>
                                     </div>
                                     <div class="quiz-button m-1 col-12 col-md-5 p-0">
                                         <button class="buttons quiz-option-c">
-                                            Perhaps
+                                            4-5 óra elég egy teljes feltöltéshez.
                                         </button>
                                     </div>
                                     <div class="quiz-button m-1 col-12 col-md-5 p-0">
                                         <button class="buttons quiz-option-d">
-                                            Placeholder Image
+                                            Ha otthon töltjük, akkor 20 perc alatt kész is.
                                         </button>
                                     </div>
                                 </div>
@@ -413,32 +421,32 @@
                 <div class="row">
                     <div class="col-12 col-md">
                         <div class="quiz">
-                            <div class="quiz-question">
-                                <img class="img-fluid d-block mx-auto" src="../img/electroniccar.jpg" alt="Galil" class="quiz-question-picture">
+                            <div class="quiz-question container">
+                                <img class="img-fluid d-block mx-auto" src="../img/tesla_model_s.jpg" alt="Galil" class="quiz-question-picture">
                                 <div class="quiz-question-text">
-                                    <span>Ez mi ez?</span>
+                                    <span>Hány kW-osak a jelenleg elérhető leggyorsabb (autó) töltők?</span>
                                 </div>
                             </div>
                             <div class="quiz-answers container">
                                 <div class="row">
-                                    <div class="quiz-button m-1 col-12 col-md-5 p-0 correct">
+                                    <div class="quiz-button m-1 col-12 col-md-5 p-0">
                                         <button class="buttons quiz-option-a">
-                                            Lorem
+                                            30 kW a jelenlegi maximum a generált hő miatt.
                                         </button>
                                     </div>
                                     <div class="quiz-button m-1 col-12 col-md-5 p-0">
                                         <button class="buttons quiz-option-b">
-                                            Ipsum
+                                            50 kW, mivel csak ennyit bírnak el a kábelek.
                                         </button>
                                     </div>
                                     <div class="quiz-button m-1 col-12 col-md-5 p-0">
                                         <button class="buttons quiz-option-c">
-                                            Perhaps
+                                            Az új járművek, mint például a teslák már akár 1000 kW-on is tudnak töltődni.
                                         </button>
                                     </div>
-                                    <div class="quiz-button m-1 col-12 col-md-5 p-0">
+                                    <div class="quiz-button m-1 col-12 col-md-5 p-0 correct">
                                         <button class="buttons quiz-option-d">
-                                            Placeholder Image
+                                            A legújabb autók jelenleg 350 kW-os töltőkkel rendelkeznek.
                                         </button>
                                     </div>
                                 </div>

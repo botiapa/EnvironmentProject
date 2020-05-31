@@ -1,14 +1,24 @@
 const numberOfChoices = 10;
 
 var quizzes = $(".quiz-container");
+var result = $("#quiz-result");
+var goodChoices = $("#good-answers")[0];
+var answersRate = $("#answers-rate")[0];
 var currentQuizId = 0
 var correctChoices = 0;
 
 $(".quiz-button").each(function(index) {
     $(this).click(function() {
         console.log("a");
-        if(currentQuizId+1 == numberOfChoices) {
-            // DISPLAY SCORE
+        if(currentQuizId+1 == numberOfChoices) { // If the quiz is finished display score
+            $(quizzes[currentQuizId]).css("opacity", "0");
+            $(quizzes[currentQuizId]).css("display", "none");
+            setTimeout(() => {
+                console.log(goodChoices);
+                goodChoices.innerHTML = correctChoices;
+                answersRate.innerHTML = (correctChoices / numberOfChoices).toFixed(1) * 100;
+                result.css("display", "block");
+            }, 500);
         }
         else {
             // Disable buttons so they can't be spammed
