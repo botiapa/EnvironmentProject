@@ -164,7 +164,7 @@ body::-webkit-scrollbar-thumb {
     background: var(--color-higklight-hover);
 }
 
-/* Menü */
+/* Menu */
 
 @media (min-width:764px) {
     .navbar {
@@ -292,6 +292,37 @@ body::-webkit-scrollbar-thumb {
 
 .fa-secondary {
     color: var(--color-secondary);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-bg-primary);
+    padding: 1rem 0;
+}
+
+footer p {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+footer a {
+    color: var(--color-text);
+}
+
+footer a:hover {
+    color: var(--color-bg-selection);
+    text-decoration: none;
+}
+
+.footer-info {
+    margin-top: 1rem;
+}
+
+@media (max-width:764px) {
+    footer {
+        display: none;
+    }
 }
 
 /* Slide Show */
