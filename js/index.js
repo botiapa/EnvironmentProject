@@ -2,9 +2,7 @@ const LIGHT_THEME = "light";
 const DARK_THEME = "dark";
 const HTML = document.documentElement;
 
-document.body.onload = function() {
-    displayTheme(); // Display current theme
-}
+window.addEventListener('DOMContentLoaded', function(){displayTheme(false)}, false); // Display current theme
 
 function displayTheme(toggle = false) {
     var current_theme = getCookie("theme") == "" ? "light" : getCookie("theme"); // If the cookie is null, treat it as if it were light
@@ -15,10 +13,13 @@ function displayTheme(toggle = false) {
     if (toggle) {
         createCookie("theme", toggled_theme);
         HTML.classList.add(toggled_theme);
+        console.log("Set theme to " + toggled_theme)
     }
     // Just display
-    else
+    else {
         HTML.classList.add(current_theme);
+        console.log("Set theme to " + current_theme)
+    }
 }
 
 // An optimized function for getting cookies
