@@ -113,6 +113,10 @@ html {
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
+html,body {
+    height: 100%;
+}
+
 body {
     background-color: var(--body-bg-color);
     color: var(--content-color);
@@ -252,8 +256,7 @@ body::-webkit-scrollbar-thumb {
         filter: opacity(0.9);
     }
     .main-content {
-        margin-top: 4rem;
-        padding: 2rem 5rem;
+        padding: 0 5rem;
     }
 
     .nav-link {
@@ -400,14 +403,37 @@ footer a:hover {
 }
 
 /* Tartalom */
+.parallex {
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 20rem 15%;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.parallex .jumbotron {
+    background-color: var(--slide-content-bg);
+    color: var(--color-text);
+    backdrop-filter: blur(10px);
+    border-radius: .5rem;
+}
+
 .main-content {
     width: 100%;
     transition: var(--transition-time) var(--transition-type);
     display: flex;
     align-content: center;
     justify-content: center;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#index-content .container {
+    margin-bottom: 2rem;
+    font-size: 18px;
 }
 
 /* Quiz */
@@ -716,4 +742,11 @@ footer a:hover {
     width: 100%;
     max-width: 1080px;
     height: auto;
-  }
+}
+
+/* Disable animations on mobile */
+@media (max-width:764px) {
+    * {
+        transition: none !important;
+    }
+}
