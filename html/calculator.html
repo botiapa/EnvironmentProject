@@ -66,39 +66,39 @@
                 <div class="col">
                     <div class="row">
                         <h1>Napelem kalkulátor</h1>
-                        <p>
+                        <p class="calc-text">
                             A 
-                            <select onchange="calculate()"  name="panel_type" id="panel_type">
+                            <select onchange="calculate()"  name="panel_type" id="panel_type" class="calc-option">
                                 <option value="pn1" selected>Panel1</option>
                                 <option value="pn2">Panel2</option>
                                 <option value="pn3">Panel3</option>
                                 <option value="pn4">Panel4</option>
                             </select>
                             típusból panelenként 
-                            <span id="panel_production"></span> 
-                            W-ot termel, ami azt jelenti, hogy
-                            <input onchange="calculate()" type="number" value="1" name="panel_db" id="panel_db" > 
+                            <b><span id="panel_production"></span>
+                            W</b>-ot termel, ami azt jelenti, hogy
+                            <input onchange="calculate()" type="number" value="1" name="panel_db" id="panel_db" class="calc-input"> 
                             db panel összesen 
-                            <span id="panel_systemproduction"></span> 
-                            W-ot, azaz 
-                            <span id="panel_systemproductionkw"></span> 
-                            kW áramot termel óránként, ami körülbelül 
-                            <span id="panel_dailyproduction"></span> 
-                            kW naponta.
+                            <b><span id="panel_systemproduction"></span> 
+                            W</b>-ot, azaz 
+                            <b><span id="panel_systemproductionkw"></span> 
+                            kW</b> áramot termel óránként, ami körülbelül 
+                            <b><span id="panel_dailyproduction"></span> 
+                            kW</b> naponta.
                         </p>
-                        <p>
+                        <p class="calc-text">
                             Ammenyiben ez egy
-                            <select onchange="calculate()" name="system_type" id="system_type">
-                                <option value="smart">Okos</option>
+                            <select onchange="calculate()" name="system_type" id="system_type" class="calc-option">
+                                <option value="smart">Okos</option></b>
                                 <option value="simple" selected>Egyszerű</option>
                             </select>
                             rendszer, akkor a befektetés 
-                            <span id="system_price"></span> 
-                            ft-ba lenne, és ha 
-                            <input onchange="calculate()" value="1" type="number" name="daily_usage" id="daily_usage"> 
-                            kW-ot fogyasztunk naponta, akkor 
-                            <span id="days_to_zero"></span> 
-                            év kell, hogy kifizetődjön a rendszer.
+                            <b><span id="system_price"></span> 
+                            Ft</b>-ba lenne, és ha 
+                            <b><input onchange="calculate()" value="1" type="number" name="daily_usage" id="daily_usage" class="calc-input"> 
+                            kW</b>-ot fogyasztunk naponta, akkor 
+                            <b><span id="days_to_zero"></span> 
+                            év</b> kell, hogy kifizetődjön a rendszer.
                         </p>
                     </div>
                 </div>

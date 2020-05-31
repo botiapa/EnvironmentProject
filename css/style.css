@@ -32,7 +32,7 @@
     --color-wrong-secondary:    #800400;
     --dialog-background:        rgba(230, 230, 230, 0.753);
     --bg-britness:                   100%;
-    --bg-input:                 #e6e6e6;
+    --bg-input:                 #eeeeee;
 
     /* Custom Bootstrap berakpoints */
     --breakpoint-xs: 0;
@@ -64,7 +64,7 @@
     --content-color:            #000000;
     --dialog-background:        rgba(230, 230, 230, 0.829);
     --bg-britness:                   100%;
-    --bg-input:                 #e6e6e6;
+    --bg-input:                 #eeeeee;
 }
 
 .dark {
@@ -89,7 +89,7 @@
     --content-color:            #ffffff;
     --dialog-background:        rgba(19, 22, 31, 0.856);
     --bg-britness:                    60%;
-    --bg-input:                 #ececec;
+    --bg-input:                 #2c2f3f;
 }
 
 /* Globális Beállítások */
@@ -440,6 +440,7 @@ body::-webkit-scrollbar-thumb {
     background-size: cover;
     -webkit-filter: saturate(180%) blur(10px);
     filter: saturate(180%) blur(10px) brightness(var(--bg-britness));
+    transition: var(--transition-time) var(--transition-type);
 }
 
 .about-us-container {
@@ -530,6 +531,7 @@ body::-webkit-scrollbar-thumb {
     background-color: var(--bg-input);
     border-width: 0px;
     margin-left: 15px;
+    color: var(--color-text);
 }
 
 .contact form label {
@@ -591,9 +593,9 @@ body::-webkit-scrollbar-thumb {
     z-index: 2;
     background-color: var(--dialog-background);
     padding: 2rem 2rem;
-    border-radius: 0.7rem;
+    border-radius: 0.5rem;
     width: 80%;
-    box-shadow: 5px 5px 10px 5px #0000007E ;
+    box-shadow: 3px 4px 4px 1px #00000050;
     -webkit-backdrop-filter: saturate(180%) blur(10px);
     backdrop-filter: saturate(180%) blur(10px);
 }
@@ -609,6 +611,32 @@ body::-webkit-scrollbar-thumb {
     display: block;
     background-image: url('../img/bg2.jpg');
     background-size: cover;
-    -webkit-filter: saturate(180%) blur(10px);
-    filter: saturate(180%) blur(10px);
+    -webkit-filter: saturate(180%) blur(10px) brightness(var(--bg-britness));
+    filter: saturate(180%) blur(10px) brightness(var(--bg-britness));
+    transition: var(--transition-time) var(--transition-type);
+}
+
+.calc-option {
+    background-color: var(--bg-input);
+    border: none;
+    color: var(--color-text);
+    padding: 5px 0;
+}
+
+.calc-input {
+    background-color: var(--bg-input);
+    border: none;
+    color: var(--color-text);
+    padding: 0 0 0 1rem;
+    margin: 5px 0;
+}
+
+.calc-text {
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 2;
+}
+
+.calculator-content h1 {
+    margin-bottom: 1.5rem;
 }
