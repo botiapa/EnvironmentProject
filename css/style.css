@@ -449,6 +449,7 @@ footer a:hover {
 
 #quiz-result .jumbotron {
     background-color: var(--color-bg-primary);;
+    margin:10px
 }
 
 #quiz-result {
@@ -457,7 +458,6 @@ footer a:hover {
 
 .quiz-container {
     transition: var(--transition-time) var(--transition-type);
-    height: calc(100vh - 4rem);
     display: flex;
     justify-content: center;
     align-items: center;

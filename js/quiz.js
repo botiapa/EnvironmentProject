@@ -17,7 +17,7 @@ $(".quiz-button").each(function(index) {
                 console.log(goodChoices);
                 goodChoices.innerHTML = correctChoices;
                 answersRate.innerHTML = (correctChoices / numberOfChoices).toFixed(1) * 100;
-                result.css("display", "block");
+                result.css("display", "flex");
             }, 500);
         }
         else {
@@ -32,7 +32,7 @@ $(".quiz-button").each(function(index) {
                 $(quizzes[currentQuizId++]).css("display", "none");
     
                 $(quizzes[currentQuizId]).css("opacity", "0");
-                $(quizzes[currentQuizId]).css("display", "block");
+                $(quizzes[currentQuizId]).css("display", "flex");
                 setTimeout(() => { // Workaround: The browser needs some time to catch up
                     $(quizzes[currentQuizId]).css("opacity", "1");
                 }, 10);
