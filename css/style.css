@@ -270,6 +270,7 @@ body::-webkit-scrollbar-thumb {
     text-decoration: none;
     transition: var(--transition-time) var(--transition-type);
     color: var(--color-text);
+    cursor: pointer;
 }
 
 .nav-link svg {
