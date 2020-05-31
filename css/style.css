@@ -406,11 +406,13 @@ footer a:hover {
     display: flex;
     align-content: center;
     justify-content: center;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 /* Quiz */
 #quiz-main {
-    height: 100%;
+    height: c;
     display: flex;
 }
 
@@ -429,6 +431,10 @@ footer a:hover {
 
 .quiz-container {
     transition: var(--transition-time) var(--transition-type);
+    height: calc(100vh - 4rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .quiz-question {
