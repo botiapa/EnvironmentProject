@@ -102,6 +102,7 @@
 /* Body */
 html {
     transition: var(--transition-time) var(--transition-type);
+    overflow-x: hidden;
 }
 
 .noselect {
@@ -769,4 +770,11 @@ footer a:hover {
 .table {
     color: var(--color-text);
     border-color: var(--color-text);
+    width: 80vw;
+    margin: auto;
+    margin-bottom: 10rem;
+}
+
+#maintable {
+    padding: 15rem;
 }
