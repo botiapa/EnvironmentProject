@@ -9,7 +9,7 @@
 
     --color-primary:            #ABF568;
     --color-secondary:          #82DB15;
-    --svg-brightness:                  0%;
+    --svg-brightness:                  80%;
 
     --color-text:               #111111;
 
@@ -30,7 +30,7 @@
     --color-correct-secondary:  #4fc225;
     --color-wrong-primary:      #C20500;
     --color-wrong-secondary:    #800400;
-    --dialog-background:        rgba(230, 230, 230, 0.753);
+    --dialog-background:      #e6e6e6d3;
     --bg-britness:                   100%;
     --bg-input:                 #eeeeee;
 
@@ -46,7 +46,7 @@
     /* Színek definiálása */
     --color-primary:            #ABF568;
     --color-secondary:          #82DB15;
-    --svg-brightness:                  0%;
+    --svg-brightness:                  80%;
 
     --color-text:               #111111;
 
@@ -62,7 +62,7 @@
     --color-bg-selection:       #7e7e7e;
     --color-text-selection:     #dddddd;
     --content-color:            #000000;
-    --dialog-background:        rgba(230, 230, 230, 0.829);
+    --dialog-background:      #e6e6e6d3;
     --bg-britness:                   100%;
     --bg-input:                 #eeeeee;
 }
@@ -71,7 +71,7 @@
     /* Színek definiálása */
     --color-primary:            #AF45EB;
     --color-secondary:          #536FEB;
-    --svg-brightness:                160%;
+    --svg-brightness:                100%;
 
     --color-text:               #fafafa;
 
@@ -87,8 +87,8 @@
     --color-bg-selection:       #bebebe;
     --color-text-selection:     #ffffff;
     --content-color:            #ffffff;
-    --dialog-background:        rgba(19, 22, 31, 0.856);
-    --bg-britness:                    60%;
+    --dialog-background:      #13161fda;
+    --bg-britness:                    30%;
     --bg-input:                 #2c2f3f;
 }
 
@@ -179,6 +179,10 @@ body::-webkit-scrollbar-thumb {
         float: right;
     }
 
+    .nav-home {
+        display: none;
+    }
+
     .nav-logo {
         font-size: 19px;
         letter-spacing: 1px;
@@ -191,13 +195,17 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-@media (max-width:1180px) {
+@media (max-width:1075px) {
     .nav-text {
         display: none;
     }
 
     .nav-text:first-child {
         display: block;
+    }
+
+    .nav-home {
+        display: none;
     }
 
     .nav-logo {
@@ -214,6 +222,10 @@ body::-webkit-scrollbar-thumb {
 
     .nav-logo {
         display: none;
+    }
+
+    .nav-home {
+        display: contents;
     }
 
     .nav-text {
@@ -244,6 +256,7 @@ body::-webkit-scrollbar-thumb {
     background-color: var(--color-bg-primary);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
+    transition: var(--transition-time) var(--transition-type);
 }
 
 .nav-link {    
@@ -262,7 +275,7 @@ body::-webkit-scrollbar-thumb {
 .nav-link svg {
     width: 1.7rem;
     transition: var(--transition-time) var(--transition-type);
-    filter: grayscale(100%) opacity(0.9) brightness(60%);
+    filter: grayscale(100%) opacity(0.9) brightness(var(--svg-brightness));
 }
 
 .nav-link:hover {
