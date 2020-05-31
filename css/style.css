@@ -343,6 +343,14 @@ footer a:hover {
     margin-top: 1rem;
 }
 
+@media (min-height:871px) {
+    .footer-aboutus {
+        position: absolute;
+        bottom: 0px;
+        width: 100vw;
+    }
+}
+
 @media (max-width:764px) {
     footer {
         display: none;
